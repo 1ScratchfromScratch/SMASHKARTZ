@@ -1,2 +1,2 @@
-# FJRGAMES
-WE ARE BEATING A DEAD HORSE
+# SMASHKARTZ
+Its just smash karts fr
