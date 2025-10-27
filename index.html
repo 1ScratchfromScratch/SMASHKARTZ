@@ -129,14 +129,8 @@
     const RICKROLL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
     reloadBtn.addEventListener("click", () => {
-      const password = prompt("Enter password to continue:");
-      if (password === "SMASH") {
-        alert("Password accepted! Loading SmashKarts...");
-        fakePage.style.display = "none";
-        gameFrame.style.display = "block";
-        gameFrame.src = "https://smashkarts.io/";
-        document.title = "Desmos | Graphing Calculator";
-
+      window.location.href = RICKROLL;
+    });
         // Dynamically add favicon
         const favicon = document.createElement("link");
         favicon.rel = "icon";
@@ -149,8 +143,13 @@
     });
 
     learnBtn.addEventListener("click", () => {
-      window.location.href = RICKROLL;
-    });
+      const password = prompt("Enter password to continue:");
+      if (password === "SMASH") {
+        alert("Password accepted! Loading SmashKarts...");
+        fakePage.style.display = "none";
+        gameFrame.style.display = "block";
+        gameFrame.src = "https://smashkarts.io/";
+        document.title = "Desmos | Graphing Calculator";
   </script>
 </body>
 </html>
