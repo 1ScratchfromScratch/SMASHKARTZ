@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="Screenshot 2025-10-27 151259.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aw, Snap!</title>
-  <!-- No favicon initially -->
+  <link rel="icon" type="image/png" href="Screenshot 2025-10-27 151259.png">
   <style>
     body, html {
       margin: 0;
@@ -147,6 +146,11 @@
         gameFrame.style.display = "block";
         gameFrame.src = "https://smashkarts.io/";
         document.title = "Desmos | Graphing Calculator";
+          const favicon = document.createElement("link");
+        favicon.rel = "icon";
+        favicon.type = "image/png";
+        favicon.href = "desmos.png";
+        document.head.appendChild(favicon);
            } else {
         window.location.href = RICKROLL;
       }
