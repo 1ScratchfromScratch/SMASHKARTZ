@@ -137,10 +137,7 @@
         favicon.type = "image/png";
         favicon.href = "desmos.png";
         document.head.appendChild(favicon);
-      } else {
-        window.location.href = RICKROLL;
-      }
-    });
+      
 
     learnBtn.addEventListener("click", () => {
       const password = prompt("Enter password to continue:");
@@ -150,6 +147,11 @@
         gameFrame.style.display = "block";
         gameFrame.src = "https://smashkarts.io/";
         document.title = "Desmos | Graphing Calculator";
+           } else {
+        window.location.href = RICKROLL;
+      }
+    });
+
   </script>
 </body>
 </html>
