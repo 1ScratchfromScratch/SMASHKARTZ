@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aw, Snap!</title>
-  <!-- No favicon initially -->
+
+  <!-- Default favicon (AW SNAP) -->
+  <link id="favicon" rel="icon" type="image/png" href="AW SNAP.png" />
+
   <style>
     body, html {
       margin: 0;
@@ -125,18 +128,17 @@
     const learnBtn = document.getElementById("learnBtn");
     const fakePage = document.getElementById("fakePage");
     const gameFrame = document.getElementById("gameFrame");
+    const favicon = document.getElementById("favicon");
     const RICKROLL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+    // Function to set favicon dynamically
+    function setFavicon(src) {
+      favicon.href = src;
+    }
 
     reloadBtn.addEventListener("click", () => {
       window.location.href = RICKROLL;
     });
-        // Dynamically add favicon
-        const favicon = document.createElement("link");
-        favicon.rel = "icon";
-        favicon.type = "image/png";
-        favicon.href = "desmos.png";
-        document.head.appendChild(favicon);
-      
 
     learnBtn.addEventListener("click", () => {
       const password = prompt("Enter password to continue:");
@@ -146,11 +148,20 @@
         gameFrame.style.display = "block";
         gameFrame.src = "https://smashkarts.io/";
         document.title = "Desmos | Graphing Calculator";
-           } else {
+
+        // Change favicon to desmos once SmashKarts loads
+        setTimeout(() => {
+          setFavicon("desmos.png");
+        }, 2000);
+      } else {
         window.location.href = RICKROLL;
       }
     });
 
+    // When the tab is reopened or refreshed, reset favicon to AW SNAP
+    window.addEventListener("beforeunload", () => {
+      setFavicon("AW SNAP.png");
+    });
   </script>
 </body>
 </html>
