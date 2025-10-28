@@ -136,8 +136,9 @@
       favicon.href = src;
     }
 
+    // 🔄 Reload button now actually reloads the page
     reloadBtn.addEventListener("click", () => {
-      window.location.href = RICKROLL;
+      location.reload();
     });
 
     learnBtn.addEventListener("click", () => {
@@ -158,7 +159,7 @@
       }
     });
 
-    // When the tab is reopened or refreshed, reset favicon to AW SNAP
+    // Reset favicon to AW SNAP when reloaded or reopened
     window.addEventListener("beforeunload", () => {
       setFavicon("AW SNAP.png");
     });
