@@ -1,2 +1,2 @@
-# SMASHKARTZ
-Its just smash karts fr
+# STUDIES
+Its just learning FR
